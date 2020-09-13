@@ -24,6 +24,11 @@ public class TempController {
         return tempRepository.findAll();
     }
 
+    @GetMapping("/temp/current")
+    Temp getCurrentTemp() {
+        return tempRepository.findTopByOrderByReadingDateDesc();
+    }
+
     @PostMapping("/temp")
     Temp newTemp (@RequestBody Temp newTemp) {
         System.out.println(newTemp.toString());
