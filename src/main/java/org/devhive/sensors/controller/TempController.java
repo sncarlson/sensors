@@ -27,7 +27,7 @@ public class TempController {
     @PostMapping("/temp")
     Temp newTemp (@RequestBody Temp newTemp) {
         System.out.println(newTemp.toString());
-        return newTemp;
+        return tempRepository.save(newTemp);
     }
 
 }

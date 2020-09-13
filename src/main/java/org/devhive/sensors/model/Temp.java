@@ -19,7 +19,7 @@ public class Temp {
     private Float humidity;
     private Float heatIndex;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     @JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss'Z'")
     private Date readingDate;
 
