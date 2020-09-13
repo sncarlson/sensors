@@ -1,4 +1,8 @@
 package org.devhive.sensors.repository;
 
-public class TempRepository {
+import org.devhive.sensors.model.Temp;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TempRepository extends JpaRepository<Temp, Long> {
+
 }
